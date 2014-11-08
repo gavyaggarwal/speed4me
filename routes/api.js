@@ -1,5 +1,17 @@
 var express = require('express');
 var DocumentDBClient = require('documentdb').DocumentClient;
+var nconf = require = ('nconf');
+
+// tell nconf which config file to use
+nconf.env();
+nconf.file({ file: 'config.json' });
+
+// From the config file
+var host = nconf.get("HOST");
+var authKey = nconf.get("AUTH_KEY");
+var databaseId = nconf.get("DATABASE");
+var collectionId = nconf.get("COLLECTION");
+
 var router = express.Router();
 
 var client = new DocumentDBClient(host, { masterKey: "DCTpmHyuVJMVWMbWMBzaGOGmYlZDV8HmhyTXMXuRSftMyFa3lqlQZfBEI6eGYbNDqeMBRrYXLKX8tlhrdQ4JcQ==" });
