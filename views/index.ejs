@@ -10,29 +10,37 @@
   <body>
     <div class="container">
     	<div class="row">
-        <span>
-
-        </span>
-        <form>
-          <button id="loginButton" class="btn btn-success" type="button">Sign In</button>
-          <input id="userText" type="text" placeholder="Username">
-        </form>
-      </div>
-
-      <div class="row">
-          <img id="titleImg" src="/img/fillertitle.png">
-      </div>
-      <div class="row" style="padding-top: 20px; font-size: 30px;">
-        <div class="col-md-12">
-          <p class="text-center">
-            Robert Eng, Gavy Aggarwal, Kevin Ye, Abirami Kurinchi-Vendhan
-          </p>
-        </div>
-      </div>
-
+        	<button id="loginButton" class="btn btn-success" type="button">Log In</button>
+	        <div id="loginBar" class="col-md-3">
+			    <div class="input-group">
+				  <input id="user" placeholder="Enter Reng here" type="text" class="form-control">
+				  <span id="goButton" class="input-group-addon">Go!</span>
+				</div>
+			</div>
+      	</div>
     </div>
+
+    
+
+	      <div class="row">
+	          <img id="titleImg" src="/img/fillertitle.png">
+	      </div>
+	      <div class="row" style="padding-top: 20px; font-size: 30px;">
+	        <div class="col-md-12">
+	          <p class="text-center">
+	            Robert Eng, Gavy Aggarwal, Kevin Ye, Abirami Kurinchi-Vendhan
+	          </p>
+	        </div>
+	      </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/js/page.js"></script>
   </body>
 </html>
+
+<!-- <div class="input-group">
+    <textarea class="form-control custom-control" rows="3" style="resize:none"></textarea>     
+    <span class="input-group-addon btn btn-primary">Send</span>
+</div>
+-->
+
