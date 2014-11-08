@@ -9,8 +9,6 @@ var conn = nconf.get("SQL_CONN");
 
 var router = express.Router();
 
-var client = new DocumentDBClient(host, { masterKey: authKey });
-
 router.get('/login', function(req, res) {
   /* Request header:
     { username: <username> }
