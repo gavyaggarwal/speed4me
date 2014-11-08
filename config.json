@@ -1,6 +1,6 @@
 {
-    "HOST"       : "<insert your DocDB endpoint here>",
-    "AUTH_KEY"   : "<insert either primary or secondary key here>",
-    "DATABASE"   : "ToDoList",
-    "COLLECTION" : "Items"
+    "HOST"       : "https://speed4me.documents.azure.com:443/",
+    "AUTH_KEY"   : "DCTpmHyuVJMVWMbWMBzaGOGmYlZDV8HmhyTXMXuRSftMyFa3lqlQZfBEI6eGYbNDqeMBRrYXLKX8tlhrdQ4JcQ==",
+    "DATABASE"   : "speed4me",
+    "COLLECTION" : "users"
 }

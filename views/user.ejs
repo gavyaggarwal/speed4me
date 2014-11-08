@@ -10,22 +10,33 @@
   <body>
     <div class="container">
     	<div class="row">
-        <form>
-          <button id="loginButton" class="btn btn-success" type="button">Sign In</button>
-          <input id="userText" type="text" placeholder="Username">
-        </form>
+        Hello INSERT NAME
+        <span>Logout</span>
       </div>
 
-      <div class="row">
-          <h1 class="text-center">Speed4.me</h1>
-          <p class="text-center">
-            Robert Eng, Gavy Aggarwal, Kevin Ye, Abirami Kurinchi-Vendhan
-          </p>
+      <% for(var a = 0; a < 5 /*drops.length*/; a++) { %>
+      <div class="row trade">
+        <div class="col-md-4 trade-description">
+          <h1>INSERT NAME</h1>
+          <p>INSERT GEOCACHE TAG</p>
+          <p>INSERT DESCRIPTION</p>
+        </div>
+        <div class="col-md-4 trade-map">
+          <img src="/img/map.png" width="100%">
+        </div>
+        <div class="col-md-4 trade-image">
+          <img src="http://i.imgur.com/hfGQ3r2.jpg" width="100%" height="100%">
+        </div>
       </div>
+      <% } %>
+
+
+
+
 
     </div>
 
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/js/page.js"></script>
   </body>
 </html>
