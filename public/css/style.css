@@ -1,6 +1,8 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #3498db;
 }
 
 h1 {
@@ -16,7 +18,9 @@ button {
 	margin-right: 100%;
 }
 
-a {
-  color: #00B7FF;
+#titleImg {
+	display: block;
+	height: 200px;
+	margin: auto;
 }
 
