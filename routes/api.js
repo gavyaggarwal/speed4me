@@ -1,6 +1,6 @@
 var express = require('express');
 var DocumentDBClient = require('documentdb').DocumentClient;
-var nconf = require = ('nconf');
+var nconf = require('nconf');
 
 // tell nconf which config file to use
 nconf.env();
