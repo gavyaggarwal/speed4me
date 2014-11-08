@@ -20,7 +20,7 @@ router.get('/login', function(req, res) {
     'username':username
   });
   res.writeHead(200, {"Content-Type": "application/json"});
-  res.end(result);
+  res.end("D" + result);
 });
 
 router.get('/getDrops', function(req, res) {
@@ -48,7 +48,7 @@ router.get('/getDrops', function(req, res) {
     });
   });
   res.writeHead(200, {"Content-Type": "application/json"});
-  res.end(result);
+  res.end("" + result);
 });
 
 
