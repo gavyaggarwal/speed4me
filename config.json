@@ -1,6 +1,3 @@
 {
-    "HOST"       : "https://speed4me.documents.azure.com:443/",
-    "AUTH_KEY"   : "DCTpmHyuVJMVWMbWMBzaGOGmYlZDV8HmhyTXMXuRSftMyFa3lqlQZfBEI6eGYbNDqeMBRrYXLKX8tlhrdQ4JcQ==",
-    "DATABASE"   : "speed4me",
-    "COLLECTION" : "users"
+    "SQL_CONN" : "Driver={SQL Server Native Client 10.0};Server=tcp:ndp5y6kmw0.database.windows.net,1433;Database=speed4me;Uid=speed4me@ndp5y6kmw0;Pwd=ABCdef123;Encrypt=yes;Connection Timeout=30;"
 }
