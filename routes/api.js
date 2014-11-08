@@ -1,20 +1,13 @@
 var express = require('express');
 var DocumentDBClient = require('documentdb').DocumentClient;
 var nconf = require('nconf');
+var sql = require('msnodesql');
 
-// tell nconf which config file to use
 nconf.env();
 nconf.file({ file: 'config.json' });
-
-// From the config file
-var host = nconf.get("HOST");
-var authKey = nconf.get("AUTH_KEY");
-var databaseId = nconf.get("DATABASE");
-var collectionId = nconf.get("COLLECTION");
+var conn = nconf.get("SQL_CONN");
 
 var router = express.Router();
-
-var client = new DocumentDBClient(host, { masterKey: authKey });
 
 router.get('/login', function(req, res) {
   /* Request header:
@@ -67,8 +60,13 @@ router.get('/getDrops', function(req, res) {
     res.writeHead(200, {"Content-Type": "application/json"});
     res.end("Invalid Authentication (rob, if you see this, ask gavy)");
   } else {
-    res.writeHead(200, {"Content-Type": "application/json"});
-    res.end(result);
+    var select = "select * from drops";
+    sql.query(conn, select, function(err, items) {
+        if(err)
+            throw err;
+        res.writeHead(200, {"Content-Type": "application/json"});
+        res.end(JSON.stringify(items));
+    });
   }
 });
 
