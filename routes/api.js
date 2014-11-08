@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/login', function(req, res) {
+router.get('/', function(req, res) {
   var username = req.headers;
-  res.write({
+  res.writeHead(200, {"Content-Type": "text/plain"});
+  res.end({
     'success':true,
     'username':username
   });
