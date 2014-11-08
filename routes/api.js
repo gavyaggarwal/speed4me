@@ -7,7 +7,7 @@ router.get('/login', function(req, res) {
     'success':true,
     'username':username
   });
-  res.render('index', { title: 'Express' });
+  //res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
