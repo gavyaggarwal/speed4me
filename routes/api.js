@@ -14,7 +14,7 @@ var collectionId = nconf.get("COLLECTION");
 
 var router = express.Router();
 
-var client = new DocumentDBClient(host, { masterKey: "DCTpmHyuVJMVWMbWMBzaGOGmYlZDV8HmhyTXMXuRSftMyFa3lqlQZfBEI6eGYbNDqeMBRrYXLKX8tlhrdQ4JcQ==" });
+var client = new DocumentDBClient(host, { masterKey: authKey });
 
 router.get('/login', function(req, res) {
   /* Request header:
