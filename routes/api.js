@@ -5,7 +5,7 @@ try {
   var sql = require('msnodesql');
 }
 catch (e) {
-
+  console.log(e);
 }
 
 nconf.env();
@@ -33,17 +33,9 @@ router.get('/login', function(req, res) {
   res.end(result);
 });
 
-router.get('/getDrops', function(req, res) {
-  /* Request header:
-    { username: <username> }
-  Response:
-    {
-      'success': true,
-      'username': <username>
-    }
-  */
+router.post('/getDrops', function(req, res) { 
+  var username = req.body.username;
 
-  var username = req.headers["username"];
   var result = JSON.stringify([
     {
       id:123,
@@ -61,19 +53,23 @@ router.get('/getDrops', function(req, res) {
     }
     ]);
 
+  console.log("flag 1");
   if(!username) {
     res.writeHead(200, {"Content-Type": "application/json"});
     res.end("Invalid Authentication (rob, if you see this, ask gavy)");
   } else {
     try {
+      console.log("flag 2");
       var select = "select * from drops";
       sql.query(conn, select, function(err, items) {
           if(err)
               throw err;
+          console.log("flag 3");
           res.writeHead(200, {"Content-Type": "application/json"});
+          console.log("aiya");
           res.end(JSON.stringify(items));
       });
-    } catch(e) {}
+    } catch(e) { console.log("Error"); console.log(e); }
   }
 });
 

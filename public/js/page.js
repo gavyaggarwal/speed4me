@@ -3,17 +3,25 @@ $(document).ready(function() {
 	$("#loginButton").click(function(event) {
 		event.preventDefault;
 
-		console.log("Login button clicked");
-
-
 		$(this).css("display","none");
 		$("#loginBar").css("display","block");
 	});
 
 	$("#goButton").click(function(event){
-		if (user.value != "")
-		{
+		if (user.value != "") {
 			console.log("Hi " + user.value + "!");
+
+			$.ajax({
+				url: "/api/getDrops",
+				type: "POST",
+				// dataType: "json",
+				data: {
+					username: $("#user").val()
+				},
+				// contentType: "application/json"
+			}).done(function() {
+				console.log("AJAX CALL SUCCESS?");
+			});
 		}
 			
 	});
