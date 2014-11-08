@@ -41,7 +41,24 @@ button {
   display: inline-block;
 }
 
+#modalFoot {
+  display: inline-block;
+}
+
+#deal_name {
+  padding: 10px;
+}
+
+#deal_description {
+  padding: 10px;
+}
+
+.col-sm-2 {
+  margin: auto;
+}
+
 .trade {
 	/*border: 5px solid red;*/
 }
+
 

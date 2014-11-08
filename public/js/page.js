@@ -18,8 +18,9 @@ $(document).ready(function() {
 			
 	});
 
-	
-
-
+	$("#newModalButton").click(function(event){
+		console.log("If you don't see this you should be pretty sad.");
+		$('#myModal').modal('show')
+	});
 });
 

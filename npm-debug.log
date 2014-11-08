@@ -1,130 +1,34 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'msnodesql' ]
-2 info using npm@1.4.28
-3 info using node@v0.13.0-pre
-4 verbose readDependencies using package.json deps
-5 verbose cache add [ 'msnodesql', null ]
-6 verbose cache add name=undefined spec="msnodesql" args=["msnodesql",null]
-7 verbose parsed url { protocol: null,
-7 verbose parsed url   slashes: null,
-7 verbose parsed url   auth: null,
-7 verbose parsed url   host: null,
-7 verbose parsed url   port: null,
-7 verbose parsed url   hostname: null,
-7 verbose parsed url   hash: null,
-7 verbose parsed url   search: null,
-7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'msnodesql',
-7 verbose parsed url   path: 'msnodesql',
-7 verbose parsed url   href: 'msnodesql' }
-8 silly lockFile 36f1ebb8-msnodesql msnodesql
-9 verbose lock msnodesql /Users/gavyaggarwal/.npm/36f1ebb8-msnodesql.lock
-10 silly lockFile 36f1ebb8-msnodesql msnodesql
-11 silly lockFile 36f1ebb8-msnodesql msnodesql
-12 verbose addNamed [ 'msnodesql', '' ]
-13 verbose addNamed [ null, '*' ]
-14 silly lockFile 0cd57691-msnodesql msnodesql@
-15 verbose lock msnodesql@ /Users/gavyaggarwal/.npm/0cd57691-msnodesql.lock
-16 silly addNameRange { name: 'msnodesql', range: '*', hasData: false }
-17 verbose request where is /msnodesql
-18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 3175257ef983ebbd
-20 verbose url raw /msnodesql
-21 verbose url resolving [ 'https://registry.npmjs.org/', './msnodesql' ]
-22 verbose url resolved https://registry.npmjs.org/msnodesql
-23 verbose request where is https://registry.npmjs.org/msnodesql
-24 info trying registry request attempt 1 at 12:49:37
-25 http GET https://registry.npmjs.org/msnodesql
-26 http 200 https://registry.npmjs.org/msnodesql
-27 silly registry.get cb [ 200,
-27 silly registry.get   { date: 'Sat, 08 Nov 2014 20:49:37 GMT',
-27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 silly registry.get     etag: '"6LAL07SYKFPP4I0BHJVJ8QUXT"',
-27 silly registry.get     'content-type': 'application/json',
-27 silly registry.get     'cache-control': 'max-age=60',
-27 silly registry.get     'content-length': '14908',
-27 silly registry.get     'accept-ranges': 'bytes',
-27 silly registry.get     via: '1.1 varnish',
-27 silly registry.get     age: '0',
-27 silly registry.get     'x-served-by': 'cache-lax1425-LAX',
-27 silly registry.get     'x-cache': 'MISS',
-27 silly registry.get     'x-cache-hits': '0',
-27 silly registry.get     'x-timer': 'S1415479777.749550,VS0,VE217',
-27 silly registry.get     vary: 'Accept',
-27 silly registry.get     connection: 'close' } ]
-28 silly addNameRange number 2 { name: 'msnodesql', range: '*', hasData: true }
-29 silly addNameRange versions [ 'msnodesql', [ '0.1.0', '0.2.0', '0.2.1' ] ]
-30 verbose addNamed [ 'msnodesql', '0.2.1' ]
-31 verbose addNamed [ '0.2.1', '0.2.1' ]
-32 silly lockFile 4e0afecd-msnodesql-0-2-1 msnodesql@0.2.1
-33 verbose lock msnodesql@0.2.1 /Users/gavyaggarwal/.npm/4e0afecd-msnodesql-0-2-1.lock
-34 silly lockFile 02dc1593-rg-msnodesql-msnodesql-0-2-1-tgz https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz
-35 verbose lock https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz /Users/gavyaggarwal/.npm/02dc1593-rg-msnodesql-msnodesql-0-2-1-tgz.lock
-36 verbose addRemoteTarball [ 'https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz',
-36 verbose addRemoteTarball   '3ce8ade4a8c016a9aa9f942810135a73c0f2c8eb' ]
-37 info retry fetch attempt 1 at 12:49:37
-38 verbose fetch to= /var/folders/xz/g0_l8dcj7g1drcwx90yq_8mh0000gn/T/npm-40078-AKR1koU7/registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz
-39 http GET https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz
-40 http 200 https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz
-41 silly lockFile 02dc1593-rg-msnodesql-msnodesql-0-2-1-tgz https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz
-42 silly lockFile 02dc1593-rg-msnodesql-msnodesql-0-2-1-tgz https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz
-43 silly lockFile 4e0afecd-msnodesql-0-2-1 msnodesql@0.2.1
-44 silly lockFile 4e0afecd-msnodesql-0-2-1 msnodesql@0.2.1
-45 silly lockFile 0cd57691-msnodesql msnodesql@
-46 silly lockFile 0cd57691-msnodesql msnodesql@
-47 silly resolved [ { name: 'msnodesql',
-47 silly resolved     description: 'Microsoft Driver for Node.js for SQL Server',
-47 silly resolved     author: { name: 'Microsoft Corp.' },
-47 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
-47 silly resolved     version: '0.2.1',
-47 silly resolved     keywords:
-47 silly resolved      [ 'sql',
-47 silly resolved        'database',
-47 silly resolved        'mssql',
-47 silly resolved        'azure',
-47 silly resolved        'sqlserver',
-47 silly resolved        'tds',
-47 silly resolved        'microsoft',
-47 silly resolved        'msnodesql',
-47 silly resolved        'node-sqlserver' ],
-47 silly resolved     homepage: 'https://github.com/WindowsAzure/node-sqlserver',
-47 silly resolved     bugs: 'https://github.com/WindowsAzure/node-sqlserver/issues',
-47 silly resolved     licenses: [ [Object] ],
-47 silly resolved     main: './lib/sql.js',
-47 silly resolved     repository:
-47 silly resolved      { type: 'git',
-47 silly resolved        url: 'git://github.com/WindowsAzure/node-sqlserver.git' },
-47 silly resolved     engines: { node: '>=0.6' },
-47 silly resolved     devDependencies: { mocha: '0.14.x', async: '0.1.x' },
-47 silly resolved     os: [ 'win32' ],
-47 silly resolved     scripts: { install: 'node scripts/install.js' },
-47 silly resolved     readme: '# Microsoft Driver for Node.js for SQL Server\r\n\r\nThe Microsoft Driver for Node.js for SQL Server allows Node.js applications on\r\nMicrosoft Windows and Microsoft Windows Azure to access Microsoft SQL Server \r\nand Microsoft Windows Azure SQL Database.\r\n\r\nThis is an initial preview release, and is not production ready. We welcome any\r\nfeedback, fixes and contributions from the community at this very early stage.\r\n\r\n## Prerequisites\r\n\r\nThe following prerequisites are necessary prior to using the driver:\r\n\r\n* Node.js - use the latest version if possible, but it has been tested on node\r\n0.6.10 and later\r\n\r\n* node-gyp - latest version installed globally (npm install -g node-gyp)\r\n\r\n* python 2.7.x - for node-gyp (make sure it is in the path)\r\n\r\n* Visual C++ 2010 - the Express edition is freely available from \r\n[Microsoft][visualstudio]\r\n\r\n* SQL Server Native Client 11.0 - available as Microsoft SQL Server 2012 \r\nNative Client found in the [SQL Server 2012 Feature Pack][sqlncli]\r\n\r\n## Build\r\n\r\nTo build the driver, first node-gyp must configure the appropriate build files.\r\n\r\n    node-gyp configure\r\n\r\nUse node-gyp to build the driver:\r\n\r\n    node-gyp build\r\n\r\nOr to build the debug version:\r\n\r\n    node-gyp build --debug\r\n\r\nThen copy the sqlserver.node file from the build\\\\(Release|Debug) directory to\r\nthe lib directory.  If you would like to use Visual C++ to debug the driver,\r\nalso copy the sqlserver.pdb file from the same directory.\r\n\r\n## Test\r\n\r\nIncluded are a few unit tests.  They require mocha, async, and assert to be \r\ninstalled via npm.  Also, set the variables in test-config.js, then run the \r\ntests as follows:\r\n\r\n    cd test\r\n    node runtests.js\r\n\r\n## Known Issues\r\n\r\nWe are aware that many features are still not implemented, and are working to\r\nupdate these. Please visit the [project on Github][project] to view \r\noutstanding [issues][issues].\r\n\r\n## Usage\r\n\r\nFor now, please see the unit tests for usage examples.\r\n\r\n## Contribute Code\r\n\r\nIf you would like to become an active contributor to this project please follow the instructions provided in [the Contribution Guidelines][contribute].\r\n\r\n## License\r\n\r\nThe Microsoft Driver for Node.js for SQL Server is licensed under the Apache\r\n2.0 license.  See the LICENSE file for more details.\r\n\r\n[visualstudio]: http://www.microsoft.com/visualstudio/\r\n\r\n[sqlncli]: http://www.microsoft.com/en-us/download/details.aspx?id=29065\r\n\r\n[project]: https://github.com/windowsazure/node-sqlserver\r\n\r\n[issues]: https://github.com/windowsazure/node-sqlserver/issues\r\n\r\n[contribute]: https://github.com/WindowsAzure/node-sqlserver/blob/master/CONTRIBUTING.md\r\n\r\n\r\n\r\n',
-47 silly resolved     _id: 'msnodesql@0.2.1',
-47 silly resolved     dist:
-47 silly resolved      { shasum: '3ce8ade4a8c016a9aa9f942810135a73c0f2c8eb',
-47 silly resolved        tarball: 'http://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz' },
-47 silly resolved     _npmVersion: '1.1.62',
-47 silly resolved     _npmUser: { name: 'jguerin', email: 'jguerin@microsoft.com' },
-47 silly resolved     maintainers: [ [Object], [Object] ],
-47 silly resolved     directories: {},
-47 silly resolved     _shasum: '3ce8ade4a8c016a9aa9f942810135a73c0f2c8eb',
-47 silly resolved     _from: 'msnodesql@',
-47 silly resolved     _resolved: 'https://registry.npmjs.org/msnodesql/-/msnodesql-0.2.1.tgz' } ]
-48 info install msnodesql@0.2.1 into /Users/gavyaggarwal/Documents/speed4me
-49 info installOne msnodesql@0.2.1
-50 error notsup Unsupported
-50 error notsup Not compatible with your operating system or architecture: msnodesql@0.2.1
-50 error notsup Valid OS:    win32
-50 error notsup Valid Arch:  any
-50 error notsup Actual OS:   darwin
-50 error notsup Actual Arch: x64
-51 error System Darwin 14.0.0
-52 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "msnodesql"
-53 error cwd /Users/gavyaggarwal/Documents/speed4me
-54 error node -v v0.13.0-pre
-55 error npm -v 1.4.28
-56 error code EBADPLATFORM
-57 verbose exit [ 1, true ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.1.7
+3 info using node@v0.10.31
+4 verbose node symlink /usr/local/bin/node
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info prestart speed4me@0.0.0
+7 info start speed4me@0.0.0
+8 verbose unsafe-perm in lifecycle true
+9 info speed4me@0.0.0 Failed to exec start script
+10 verbose stack Error: speed4me@0.0.0 start: `node ./bin/www`
+10 verbose stack Exit status 8
+10 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
+10 verbose stack     at ChildProcess.emit (events.js:98:17)
+10 verbose stack     at maybeClose (child_process.js:756:16)
+10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
+11 verbose pkgid speed4me@0.0.0
+12 verbose cwd /Users/StefanMac/Caltech/Hackathon/HackSC/speed4me
+13 error Darwin 13.1.0
+14 error argv "node" "/usr/local/bin/npm" "start"
+15 error node v0.10.31
+16 error npm  v2.1.7
+17 error code ELIFECYCLE
+18 error speed4me@0.0.0 start: `node ./bin/www`
+18 error Exit status 8
+19 error Failed at the speed4me@0.0.0 start script.
+19 error This is most likely a problem with the speed4me package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     node ./bin/www
+19 error You can get their info via:
+19 error     npm owner ls speed4me
+19 error There is likely additional logging output above.
+20 verbose exit [ 1, true ]
