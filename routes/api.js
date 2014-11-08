@@ -32,7 +32,7 @@ router.get('/login', function(req, res) {
     'username':username
   });
   res.writeHead(200, {"Content-Type": "application/json"});
-  res.end("D" + result);
+  res.end(result);
 });
 
 router.get('/getDrops', function(req, res) {
@@ -46,22 +46,30 @@ router.get('/getDrops', function(req, res) {
   */
 
   var username = req.headers["username"];
-  var result = JSON.stringify({
-    'success':true,
-    'username':username
-  });
-  readOrCreateDatabase(function (database) {
-    result['db'] = database;
-    readOrCreateCollection(database, function (collection) {
-      result['col'] = collection
-      listItems(collection, function (items) {
-        //res.render('index', { title: 'My ToDo List', tasks: items });
-      });
-    });
-  });
-  res.writeHead(200, {"Content-Type": "application/json"});
-  res.end("" + result);
-});
+  var result = JSON.stringify([
+    {
+      id:123,
+      seller:'dope_peddler',
+      geocachetag:'234o8sdfalj',
+      images:'http://imgur.com/gallery/JxhmTIR',
+      description:'i <3 dope'
+    },
+    {
+      id:300,
+      seller:'stoner_boi',
+      geocachetag:'fwehoi234oysd',
+      images:'http://imgur.com/gallery/BL6Vs',
+      description:'i love 2 smoke'
+    }
+    ]);
 
+  if(!username) {
+    res.writeHead(200, {"Content-Type": "application/json"});
+    res.end("Invalid Authentication (rob, if you see this, ask gavy)");
+  } else {
+    res.writeHead(200, {"Content-Type": "application/json"});
+    res.end(result);
+  }
+});
 
 module.exports = router;
