@@ -1,7 +1,12 @@
 var express = require('express');
 var DocumentDBClient = require('documentdb').DocumentClient;
 var nconf = require('nconf');
-var sql = require('msnodesql');
+try {
+  var sql = require('msnodesql');
+}
+catch (e) {
+
+}
 
 nconf.env();
 nconf.file({ file: 'config.json' });
@@ -60,13 +65,15 @@ router.get('/getDrops', function(req, res) {
     res.writeHead(200, {"Content-Type": "application/json"});
     res.end("Invalid Authentication (rob, if you see this, ask gavy)");
   } else {
-    var select = "select * from drops";
-    sql.query(conn, select, function(err, items) {
-        if(err)
-            throw err;
-        res.writeHead(200, {"Content-Type": "application/json"});
-        res.end(JSON.stringify(items));
-    });
+    try {
+      var select = "select * from drops";
+      sql.query(conn, select, function(err, items) {
+          if(err)
+              throw err;
+          res.writeHead(200, {"Content-Type": "application/json"});
+          res.end(JSON.stringify(items));
+      });
+    } catch(e) {}
   }
 });
 
