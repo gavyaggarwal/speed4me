@@ -18,16 +18,28 @@ button {
 	margin-right: 100%;
 }
 
+.row {
+  position: relative;
+}
+
 #titleImg {
 	display: block;
 	height: 200px;
 	margin: auto;
 }
 
+#loginButton {
+  float: right;
+  position: relative;
+}
 
+#loginBar {
+  display: none;
+}
 
-
-
+#input-group {
+  display: inline-block;
+}
 
 .trade {
 	/*border: 5px solid red;*/
