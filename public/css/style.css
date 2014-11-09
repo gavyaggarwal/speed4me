@@ -1,12 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: white;
-  background-color: #3498db;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:200,300,500);
+@import "mixins.less";
+
+html,body {
+  padding:50px 0px;
+  margin:0px;
+  font-family:'Open Sans', sans-serif;
+  font-weight:300;
+  color:white;
+  background-color:#34AADC;
 }
 
-h1 {
+img {
+  -webkit-user-drag:none;
+}
+
+h2 {
   text-align: center;
+  font-weight:300;
+  font-size:48px;
+}
+
+h5 {
+  text-align: center;
+  font-weight:300;
+  font-size:18px;
+}
+
+#login {
+  width:400px;
+  display:block;
+  margin:50px auto;
+  padding:30px;
+  border-radius:10px;
+  background:white;
+  border:2px solid white;
 }
 
 p {
@@ -60,5 +87,3 @@ button {
 .trade {
 	/*border: 5px solid red;*/
 }
-
-

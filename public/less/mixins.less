@@ -1,0 +1,101 @@
+//Small Functions to Make Life Easier
+//Copyright 2014 by Gavy Aggarwal
+
+.padding(@padding-value: 15px) {
+  padding:@padding-value;
+}
+
+.margin(@margin-value: 15px) {
+  margin:@margin-value;
+}
+
+.font(@font-size: 20px; @font-weight: 300; @font-family: 'Open Sans') {
+  font-size: @font-size;
+  font-weight: @font-weight;
+  font-family: @font-family, sans-serif;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+.center {
+  text-align:center;
+}
+
+.size(@element-width: 100%; @element-height: auto;) {
+  width: @element-width;
+  height: @element-height;
+}
+
+.position(@position: absolute; @top: auto; @left: auto; @bottom: auto; @right: auto) {
+  position: @position;
+  top: @top;
+  left: @left;
+  right: @right;
+  bottom: @bottom;
+}
+
+.no-select {
+  user-select:none;
+  -o-user-select:none;
+  -ms-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+
+.transition(@property; @duration: 0.4s) {
+   transition: @property @duration ease-in-out;
+   -o-transition: @property @duration ease-in-out;
+   -ms-transition: @property @duration ease-in-out;
+   -moz-transition: @property @duration ease-in-out;
+   -webkit-transition: @property @duration ease-in-out;
+}
+
+.blur(@blur-radius: 5px) {
+  filter: blur(@blur-radius);
+  -o-filter: blur(@blur-radius);
+  -ms-filter: blur(@blur-radius);
+  -moz-filter: blur(@blur-radius);
+  -webkit-filter: blur(@blur-radius);
+}
+
+.drop-shadow(@shadow: 0px 0px 1px rgba(0,0,0,.5)) {
+  filter: drop-shadow(@shadow);
+  -o-filter: drop-shadow(@shadow);
+  -ms-filter: drop-shadow(@shadow);
+  -moz-filter: drop-shadow(@shadow);
+  -webkit-filter: drop-shadow(@shadow);
+}
+
+.rotate(@degree: 90) {
+  transform: rotate(@degree * 1deg);
+  -o-transform: rotate(@degree * 1deg);
+  -ms-transform: rotate(@degree * 1deg);
+  -moz-transform: rotate(@degree * 1deg);
+  -webkit-transform: rotate(@degree * 1deg);
+  @IEdeg: round(@degree / 90, 0);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@IEdeg);
+}
+
+.transform(@string){
+  transform: @string;
+  -o-transform: @string;
+  -ms-transform: @string;
+  -moz-transform: @string;
+  -webkit-transform: @string;
+}
+
+.mask-image(@url:'') {
+  mask-image: url(@url);
+  -o-mask-image: url(@url);
+  -ms-mask-image: url(@url);
+  -moz-mask-image: url(@url);
+  -webkit-mask-image: url(@url);
+  -webkit-mask-size: cover;
+}
+
+.inline {
+  display:inline-block;
+  vertical-align:middle;
+}

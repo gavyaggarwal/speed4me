@@ -1,0 +1,17 @@
+.small-caps {
+  font-variant: small-caps;
+}
+.center {
+  text-align: center;
+}
+.no-select {
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.inline {
+  display: inline-block;
+  vertical-align: middle;
+}

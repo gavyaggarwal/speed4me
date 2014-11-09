@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title speed4me
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .container
+      .row#template
+
+      .row
+        button#loginButton.btn.btn-success(type='button') Log In
+        #loginBar.col-md-3
+          .input-group
+            input#user.form-control(placeholder='Enter Reng here', type='text')
+            span#goButton.input-group-addon Go!
+    .row
+      img#titleImg(src='/img/fillertitle.png')
+    .row(style='padding-top: 20px; font-size: 30px;')
+      .col-md-12
+        p.text-center
+          | Robert Eng, Gavy Aggarwal, Kevin Ye, Abirami Kurinchi-Vendhan
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='/js/page.js')
